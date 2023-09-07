@@ -15,10 +15,10 @@
       <img src="img/icons/logo-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
     </picture>
   </a>
-  <nav class="main-nav main-nav--closed main-nav--nojs">
-    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
+  <nav class="nav nav--closed nav--nojs">
+    <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="nav__wrapper">
+      <ul class="nav__list site-list">
         <li class="site-list__item site-list__item--active">
           <a href="index.html">Главная</a>
         </li>
@@ -35,7 +35,7 @@
           <a href="https://htmlacademy.ru">HTML Academy</a>
         </li>
       </ul>
-      <ul class="main-nav__list user-list">
+      <ul class="nav__list user-list">
         <li class="user-list__item">
           <a class="user-list__login js-login" href="#">
             Войти
@@ -45,8 +45,7 @@
     </div>
   </nav>
 </header>
-
-<main class="main-container">
+<main class="main">
   <h1 class="visually-hidden">Барбершоп «Бородинский» — истинно мужская классика</h1>
   <section class="stats">
     <div class="stats__wrapper">
@@ -94,12 +93,10 @@
       </small>
     </div>
   </section>
-
 </main>
-
-<footer class="main-footer">
-  <div class="main-footer__wrapper">
-    <div class="main-footer__contacts contacts">
+<footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__contacts contacts">
       <b class="contacts__title">Барбершоп «Бородинский»</b>
       <p class="contacts__text">
         г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
@@ -108,21 +105,21 @@
         </a>
       </p>
     </div>
-    <div class="main-footer__social social">
+    <div class="footer__social social">
       <b class="social__title">Давайте дружить!</b>
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Мы в Ютубе" title="Мы в Ютубе"></a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="Мы в Телеграме" title="Мы в Телеграме"></a>
         </li>
       </ul>
     </div>
-    <div class="main-footer__copyright copyright">
+    <div class="footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>

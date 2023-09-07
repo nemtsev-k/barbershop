@@ -149,7 +149,7 @@ export default gulp.series(
     html,
     // scripts,
     svg,
-    // stack,
+    stack,
     createWebp
   ),
   gulp.series(
