@@ -1,0 +1,44 @@
+@use "../global/variables" as *;
+
+.social {
+
+}
+
+.social__title {
+  font-weight: 700;
+}
+
+.social__list {
+  display: flex;
+  list-style: none;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.social__link {
+  //display: block;
+  background-color: $secondary-text-color;
+
+  &--vk {
+    width: 23px;
+    height: 26px;
+    mask-image: url("../img/stack.svg#vk");
+  }
+
+  &--youtube {
+    width: 36px;
+    height: 36px;
+    mask-image: url("../img/stack.svg#youtube");
+  }
+
+  &--telegram {
+    width: 36px;
+    height: 36px;
+    mask-image: url("../img/stack.svg#telegram");
+  }
+}

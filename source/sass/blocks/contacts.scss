@@ -1,0 +1,14 @@
+@use "../global/variables" as *;
+
+.contacts {
+
+}
+
+.contacts__title {
+  font-weight: 700;
+}
+
+.contacts__phone {
+  color: $secondary-text-color;
+  text-decoration: none;
+}
