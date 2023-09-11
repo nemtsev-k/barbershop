@@ -1,0 +1,17 @@
+@use "../global/variables" as *;
+
+.link-button {
+  text-decoration: none;
+  color: $secondary-text-color;
+  border: 1px solid $link-border-color;
+
+  &:hover {
+    border-color: $link-border-color-hover;
+  }
+
+  &:active {
+    color: rgba($secondary-text-color, 0.3);
+    border-color: transparent;
+    background: $link-bg-color-active
+  }
+}

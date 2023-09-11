@@ -1,6 +1,21 @@
 @use "../global/variables" as *;
 
 .footer {
+  padding: 33px 0 24px;
   background: $secondary-bg-color;
   color: $secondary-text-color;
+}
+
+.footer__wrapper {
+  display: grid;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.footer__contacts {
+  margin: 0 0 26px;
+}
+
+.footer__social {
+  margin: 0 0 31px;
 }

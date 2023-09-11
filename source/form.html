@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Запись на стрижку</title>
+  <title>Запись на стрижку – Барбершоп «Бородинский»</title>
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -12,7 +12,7 @@
   <link rel="preload" href="fonts/pt-sans-narrow-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page__body">
 <header>
   <nav class="nav nav--closed nav--nojs">
     <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -97,8 +97,34 @@
     <a class="button" href="#">Отправить заявку</a>
   </fieldset>
 </main>
-<footer>
-
+<footer class="footer">
+  <div class="footer__wrapper">
+    <div class="footer__contacts contacts">
+      <p class="contacts__title">Барбершоп «Бородинский»</p>
+      <p class="contacts__text">г. Санкт-Петербург, ул. Большая Конюшенная 19/8</p>
+      <a class="link-button contacts__phone" href="tel:+78125556666">
+        <span class="contacts__phone-text">Тел.:</span> +7 (812) 555-66-66
+      </a>
+    </div>
+    <div class="footer__social social">
+      <p class="social__title">Давайте дружить!</p>
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="link-button social__link social__link--vk" href="https://vk.com/htmlacademy" aria-label="Мы в ВКонтакте" title="Мы в ВКонтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="link-button social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Мы в Ютубе" title="Мы в Ютубе"></a>
+        </li>
+        <li class="social__item">
+          <a class="link-button social__link social__link--telegram" href="https://t.me/htmlacademy" aria-label="Мы в Телеграме" title="Мы в Телеграме"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__copyright copyright">
+      <div class="copyright__text">Разработано:</div>
+      <a class="link-button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+    </div>
+  </div>
 </footer>
 </body>
 </html>

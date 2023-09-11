@@ -1,0 +1,26 @@
+@use "../global/variables" as *;
+
+.copyright {
+  padding: 0 20px;
+  //display: grid;
+  //justify-content: center;
+  //justify-items: center;
+  //align-items: center;
+}
+
+.copyright__text {
+  //display: block;
+  margin: 0 0 13px;
+  text-align: center;
+}
+
+.copyright__link {
+  display: block;
+  text-align: center;
+  padding: 14px 28px 13px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+
+
+}
