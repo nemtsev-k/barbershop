@@ -36,9 +36,7 @@
       </ul>
       <ul class="nav__list user-list">
         <li class="user-list__item">
-          <a class="user-list__login js-login" href="#">
-            Войти
-          </a>
+          <a class="user-list__login js-login" href="#">Войти</a>
         </li>
       </ul>
     </div>
@@ -47,55 +45,75 @@
 <main>
   <h1>Запись на стрижку</h1>
   <a href="index.html">На главную</a>
-  <fieldset>
-    <input name="surname" placeholder="Фамилия">
-    <input name="name" placeholder="Имя">
-    <input name="patronymic" placeholder="Отчество">
-    <input type="phone" name="phone" placeholder="Контактный телефон">
-    <input type="email" name="email" placeholder="Контактный e-mail">
-    <textarea name="Доп. информация для мастера" placeholder=""></textarea>
-  </fieldset>
-  <fieldset>
-    <h2>Выберите модель бороды</h2>
-    <input type="radio" name="beard-1" id="beard-1">
-    <label for="beard-1">адмирал</label>
-    <input type="radio" name="beard-2" id="beard-2">
-    <label for="beard-2">лесоруб</label>
-    <input type="radio" name="beard-3" id="beard-3">
-    <label for="beard-3">полярник</label>
-    <input type="radio" name="beard-4" id="beard-4">
-    <label for="beard-4">боярин</label>
-    <input type="radio" name="beard-5" id="beard-5">
-    <label for="beard-5">мудрец</label>
-  </fieldset>
-  <fieldset>
-    <h2>Дополнительные услуги</h2>
-    <div>
-      <input type="checkbox" name="extra" id="color-beard" value="color-beard">
-      <label for="color-beard">Подкрасить бороду</label>
-    </div>
-    <div>
-      <input type="checkbox" name="extra" id="wind-up-mustache" value="wind-up-mustache">
-      <label for="wind-up-mustache">Накрутить усы</label>
-    </div>
-    <div>
-      <input type="checkbox" name="extra" id="comb-beard" value="comb-beard">
-      <label for="comb-beard">Причесать бороду</label>
-    </div>
-    <div>
-      <input type="checkbox" name="extra" id="trim-temples" value="trim-temples">
-      <label for="trim-temples">Подровнять виски</label>
-    </div>
-    <div>
-      <input type="checkbox" name="extra" id="remove-gray-hair" value="remove-gray-hair">
-      <label for="remove-gray-hair">Убрать седину</label>
-    </div>
-    <div>
-      <input type="checkbox" name="extra" id="polish-bald-spot" value="polish-bald-spot">
-      <label for="polish-bald-spot">Отполировать лысину</label>
-    </div>
-    <a class="button" href="#">Отправить заявку</a>
-  </fieldset>
+  <form class="form" id="haircut">
+    <fieldset class="form__area-main">
+      <div class="form__input-field">
+        <input class="form__input-text" name="surname" id="haircut-surname" placeholder="Фамилия" aria-label="Фамилия">
+        <input class="form__input-text" name="name" id="haircut-name" placeholder="Имя" aria-label="Имя">
+        <input class="form__input-text" name="patronymic" id="haircut-patronymic" placeholder="Отчество" aria-label="Отчество">
+      </div>
+      <div class="form__input-field">
+        <input class="form__input-text" type="tel" name="phone" id="haircut-phone" placeholder="Контактный телефон" aria-label="Контактный телефон">
+        <input class="form__input-text" type="email" name="email" id="haircut-email" placeholder="Контактный e-mail" aria-label="Контактный e-mail">
+      </div>
+      <textarea class="form__input-text form__input-text--textarea" name="extra" id="haircut-extra" placeholder="Доп. информация для мастера" aria-label="Доп. информация для мастера"></textarea>
+    </fieldset>
+    <fieldset class="form__radio-area">
+      <h2>Выберите модель бороды</h2>
+      <div class="form__radio-content">
+        <div class="form__radio-field">
+          <input class="form__radio-input" type="radio" name="model-beard" id="haircut-beard-1">
+          <label class="form__radio-label" for="haircut-beard-1">адмирал</label>
+        </div>
+       <div class="form__radio-field">
+         <input class="form__radio-input" type="radio" name="model-beard" id="haircut-beard-2">
+         <label class="form__radio-label" for="haircut-beard-2">лесоруб</label>
+       </div>
+        <div class="form__radio-field">
+          <input class="form__radio-input" type="radio" name="model-beard" id="haircut-beard-3">
+          <label class="form__radio-label" for="haircut-beard-3">полярник</label>
+        </div>
+        <div class="form__radio-field">
+          <input class="form__radio-input" type="radio" name="model-beard" id="haircut-beard-4">
+          <label class="form__radio-label" for="haircut-beard-4">боярин</label>
+        </div>
+        <div class="form__radio-field">
+          <input class="form__radio-input" type="radio" name="model-beard" id="haircut-beard-5">
+          <label class="form__radio-label" for="haircut-beard-5">мудрец</label>
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form__checkbox-area">
+      <h2>Дополнительные услуги</h2>
+      <div class="form__checkbox-content">
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-color-beard" value="color-beard">
+          <label class="form__checkbox-label" for="haircut-color-beard">Подкрасить бороду</label>
+        </div>
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-wind-up-mustache" value="wind-up-mustache">
+          <label class="form__checkbox-label" for="haircut-wind-up-mustache">Накрутить усы</label>
+        </div>
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-comb-beard" value="comb-beard">
+          <label class="form__checkbox-label" for="haircut-comb-beard">Причесать бороду</label>
+        </div>
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-trim-temples" value="trim-temples">
+          <label class="form__checkbox-label" for="haircut-trim-temples">Подровнять виски</label>
+        </div>
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-remove-gray-hair" value="remove-gray-hair">
+          <label class="form__checkbox-label" for="haircut-remove-gray-hair">Убрать седину</label>
+        </div>
+        <div class="form__checkbox-field">
+          <input class="form__checkbox-input" type="checkbox" name="extra" id="haircut-polish-bald-spot" value="polish-bald-spot">
+          <label class="form__checkbox-label" for="haircut-polish-bald-spot">Отполировать лысину</label>
+        </div>
+      </div>
+    </fieldset>
+    <a class="form__button button" href="#">Отправить заявку</a>
+  </form>
 </main>
 <footer class="footer">
   <div class="footer__wrapper">
