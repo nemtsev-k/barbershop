@@ -13,38 +13,40 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
-<header class="main-header">
-  <a class="main-header__logo">
-    <picture>
-      <source srcset="img/icons/logo-desktop.svg" media="(min-width: 1440px)">
-      <source srcset="img/icons/logo-tablet.svg" media="(min-width: 768px)">
-      <img src="img/icons/logo-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
-    </picture>
-  </a>
+<header class="header">
+  <div class="header__logo">
+    <div class="header__logo-inner">
+      <picture>
+        <source srcset="img/icons/logo-desktop.svg" media="(min-width: 1200px)">
+        <source srcset="img/icons/logo-tablet.svg" media="(min-width: 768px)">
+        <img class="header__logo-image" src="img/icons/logo-mobile.svg" width="226" height="30" alt="Барбершоп «Бородинский»">
+      </picture>
+    </div>
+  </div>
   <nav class="nav nav--closed nav--nojs">
-    <button class="nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
     <div class="nav__wrapper">
-      <ul class="nav__list site-list">
-        <li class="site-list__item site-list__item--active">
-          <a href="index.html">Главная</a>
+      <ul class="nav__site-list">
+        <li class="nav__site-item nav__site-item--active">
+          <a class="nav__site-link" href="index.html">Главная</a>
         </li>
-        <li class="site-list__item">
-          <a href="photo.html">Наши работы</a>
+        <li class="nav__site-item">
+          <a class="nav__site-link" href="photo.html">Наши работы</a>
         </li>
-        <li class="site-list__item">
-          <a href="form.html">Записаться</a>
+        <li class="nav__site-item">
+          <a class="nav__site-link" href="form.html">Записаться</a>
         </li>
-        <li class="site-list__item">
-          <a href="#">Контакты</a>
+        <li class="nav__site-item">
+          <a class="nav__site-link" href="#">Контакты</a>
         </li>
-        <li class="site-list__item">
-          <a href="https://htmlacademy.ru">HTML Academy</a>
+        <li class="nav__site-item">
+          <a class="nav__site-link" href="https://htmlacademy.ru">HTML Academy</a>
         </li>
       </ul>
-      <ul class="nav__list user-list">
-        <li class="user-list__item">
-          <a class="user-list__login js-login" href="#">
-            Войти
+      <ul class="nav__user-list">
+        <li class="nav__user-item">
+          <a class="nav__user-login js-login" href="#">
+            <span class="nav__user-text">Войти</span>
           </a>
         </li>
       </ul>
@@ -170,5 +172,6 @@
     </div>
   </div>
 </footer>
+<script src="js/nav.js"></script>
 </body>
 </html>

@@ -1,0 +1,370 @@
+@use "../global/variables" as *;
+
+.nav {
+  position: relative;
+  width: auto;
+  min-height: 51px;
+  background-color: $light-bg-color;
+
+  @media (min-width: $tablet) {
+    background-color: #000000;
+  }
+}
+
+.nav__wrapper {
+  @media (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop) {
+    width: 960px;
+  }
+}
+
+.nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 70px;
+  height: 50px;
+  background-color: #6a4d38;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: #624530;
+  }
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.nav--closed > .nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+  }
+
+  &:active::before {
+    background-color: rgba($primary-bg-color, 30%);
+    box-shadow:
+      0 8px 0 0 rgba($primary-bg-color, 30%),
+      0 16px 0 0 rgba($primary-bg-color, 30%);
+  }
+}
+
+.nav--opened > .nav__toggle {
+  top: 0;
+  right: auto;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+    width: 36px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba($primary-bg-color, 30%);
+  }
+}
+
+.nav__site-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 700;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 570px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop) {
+    width: 780px;
+  }
+}
+
+.nav__site-item {
+  @media (min-width: $tablet) {
+    margin-right: 33px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        background: $light-bg-color;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-right: 0;
+
+    &--active::after {
+      right: 30px;
+      left: 30px;
+    }
+  }
+}
+
+.nav__site-link[href] {
+  &:hover {
+    @media (min-width: $tablet) {
+      color: $special-text-color;
+      background-color: $dark-bg-color;
+    }
+
+    @media (min-width: $desktop) {
+      color: $primary-text-color;
+      background-color: $primary-bg-color;
+    }
+  }
+
+  &:active {
+    @media (min-width: $tablet) {
+      color: #ffffff;
+      background-color: #000000;
+      opacity: 0.3;
+    }
+
+    @media (min-width: $desktop) {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+      opacity: 1;
+    }
+
+  }
+}
+
+.nav__site-link {
+  position: relative;
+  display: block;
+  padding: 13px 21px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $light-bg-color;
+  border-top: 1px solid #886e5b;
+  border-bottom: 1px solid #71543f;
+
+  @media (min-width: $tablet) {
+    padding: 24px 0;
+
+    background: none;
+    border: none;
+  }
+
+  @media (min-width: $desktop) {
+    padding-right: 31px;
+    padding-left: 31px;
+  }
+}
+
+.nav__user-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  @media (min-width: $tablet) {
+    width: 60px;
+  }
+
+  @media (min-width: $desktop) {
+    width: auto;
+    max-width: 160px;
+  }
+}
+
+.nav__user-login {
+  position: relative;
+  display: block;
+  padding: 13px 21px 13px 49px;
+  line-height: 24px;
+  color: #ffffff;
+  text-decoration: none;
+
+  @media (min-width: $tablet) {
+    width: 60px;
+    height: 70px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 25px 30px 23px 50px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+      background-color: #ffffff;
+    }
+  }
+
+  &:hover::before {
+    opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      opacity: 1;
+      background-color: $special-text-color;
+    }
+
+    @media (min-width: $desktop) {
+      opacity: 0.3;
+      background-color: $primary-text-color;
+    }
+  }
+
+  &:active::before {
+    opacity: 0.3;
+
+    @media (min-width: $tablet) {
+      background-color: $secondary-text-color;
+    }
+
+    @media (min-width: $desktop) {
+      opacity: 0.1;
+      background-color: $primary-text-color;
+    }
+  }
+
+  &::before {
+    content: "";
+    mask-image: url("../img/stack.svg#login");
+    background-color: $secondary-text-color;
+    opacity: 0.3;
+    position: absolute;
+    top: 17px;
+    left: 21px;
+    width: 16px;
+    height: 16px;
+
+    @media (min-width: $tablet) {
+      top: 29px;
+      left: 12px;
+    }
+
+    @media (min-width: $desktop) {
+      left: 15px;
+    }
+  }
+}
+
+@media (max-width: calc($tablet - 1px)) {
+  .nav--closed .nav__site-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .nav--closed .nav__site-item--active a {
+    padding-right: 70px;
+    padding-left: 70px;
+    text-align: center;
+  }
+
+  .nav--closed .nav__user-item {
+    display: none;
+  }
+
+  .nav--opened .nav__wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 70px;
+    z-index: 10;
+    background-color: #6a4d38;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 7px;
+      height: 100%;
+      box-shadow: inset 4px 0 7px -2px fade(#000000, 40%);
+    }
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__wrapper {
+    position: static;
+    min-height: 0;
+  }
+
+  .nav--nojs .nav__site-item {
+    display: block;
+  }
+
+  .nav--nojs .nav__site-item--active a {
+    padding-right: 21px;
+    padding-left: 21px;
+    text-align: left;
+  }
+
+  .nav--nojs .nav__user-item {
+    display: block;
+    background-color: #6a4d38;
+  }
+}
